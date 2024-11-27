@@ -2,6 +2,7 @@
 
 ![movie](https://github.com/user-attachments/assets/78507f89-5b83-4d01-b937-c1f76344046d)
 
+Projede, TMDB'nin sağladığı film veri seti kullanılmıştır. Bu veri seti, her bir filmi temsil eden 4803 satır ve 20 farklı özelliğe sahiptir. Özellikler arasında film başlıkları, türleri, bütçeleri, gelirleri, popülerlik puanları, izleyici oyları, çıkış tarihleri ve filmlerin kısa özetleri gibi bilgiler bulunmaktadır. Veri seti, filmlerle ilgili hem sayısal hem de metinsel veriler içererek geniş bir analiz yelpazesine olanak tanır. Veri seti, eksik ve aykırı veriler gibi sorunları çözmeyi gerektirerek veri işleme adımlarını daha önemli hale getirir.
 
 - **budget (Bütçe): Filmin prodüksiyon bütçesi (sayısal).**
 - **genres (Türler): Filmin tür bilgisi. JSON formatında, birden fazla tür içerebilir (ör. Action, Adventure).**
