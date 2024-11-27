@@ -25,12 +25,12 @@ Projede, TMDB'nin sağladığı film veri seti kullanılmıştır. Bu veri seti,
 - **vote_average: İzleyici oylamalarının ortalaması.**
 - **vote_count: İzleyici oylamalarının toplam sayısı.**
 
-#Projenin Amacı 
+# Projenin Amacı 
 
 Bu projenin temel amacı, bir film veri setini analiz ederek farklı modeller ve yöntemler geliştirmektir. Bu kapsamda, filmlerin başarısını tahmin etmek, gelir ve popülerlik ilişkisini incelemek, doğal dil işleme (NLP) tekniklerini kullanarak metinsel içeriklerden içgörüler çıkarmak ve izleyicilere öneriler sunmak üzere tavsiye sistemleri geliştirilmiştir. Sonuçların daha anlamlı hale getirilmesi için veri görselleştirme yöntemleri kullanılmıştır. Proje, film endüstrisindeki trendleri anlamak ve kullanıcı odaklı öneri sistemleri oluşturmak açısından güçlü bir temel sağlar.
 
 
-#1. Veri Yükleme ve Temizleme
+# 1. Veri Yükleme ve Temizleme
 
 Projenin ilk adımı, film veri setinin yüklenmesidir. Veri, pandas ile CSV formatından yüklenmiş ve eksik veriler incelenmiştir. Örneğin, budget, revenue ve popularity gibi sütunlardaki eksik değerler, veri analizlerini etkilememesi için ortanca (median) değerlerle doldurulmuştur. Ayrıca, budget sütunundaki aykırı değerler %95'lik eşik değeri kullanılarak sınırlandırılmış ve release_date sütunu datetime formatına dönüştürülerek hatalı değerler temizlenmiştir. Bu adım, sonraki analizlerin doğruluğunu artırmak için kritik bir aşamadır.
 
