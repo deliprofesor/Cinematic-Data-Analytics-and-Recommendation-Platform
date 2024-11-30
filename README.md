@@ -2,6 +2,36 @@
 
 ![movie](https://github.com/user-attachments/assets/78507f89-5b83-4d01-b937-c1f76344046d)
 
+# Wholesale Customer Segmentation and Analysis
+
+This project aims to perform data exploration, segmentation, and modeling on wholesale customer data using various clustering algorithms such as K-Means, DBSCAN, and Gaussian Mixture Models (GMM). Additionally, the project leverages Principal Component Analysis (PCA) for data visualization and uses decision trees to predict customer channel preferences based on their attributes.
+
+## Project Overview
+
+The goal of this project is to understand wholesale customer behavior through data exploration, clustering, and prediction. By applying machine learning techniques like clustering and decision trees, this project helps businesses segment customers, detect outliers, and analyze relationships between variables. The results are visualized to make the findings more accessible and actionable.
+
+## Technologies Used
+
+- **Python** – Core programming language for data analysis and modeling.
+- **Pandas** – Data manipulation and cleaning.
+- **NumPy** – Numerical operations and array manipulation.
+- **Scikit-Learn** – Machine learning algorithms (K-Means, DBSCAN, GMM, Decision Trees).
+- **Matplotlib** – Plotting and visualization of data.
+- **Seaborn** – Statistical data visualization.
+- **PCA** – Principal Component Analysis for dimensionality reduction.
+- **Jupyter Notebook** – For code and documentation integration.
+- **PowerBI** – For interactive data visualizations and reports.
+
+## Installation Instructions
+
+To run the project locally, follow these steps:
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/deliprofesor/Wholesale-Customer-Segmentation.git
+   cd Wholesale-Customer-Segmentation
+   
 Projede, TMDB'nin sağladığı film veri seti kullanılmıştır. Bu veri seti, her bir filmi temsil eden 4803 satır ve 20 farklı özelliğe sahiptir. Özellikler arasında film başlıkları, türleri, bütçeleri, gelirleri, popülerlik puanları, izleyici oyları, çıkış tarihleri ve filmlerin kısa özetleri gibi bilgiler bulunmaktadır. Veri seti, filmlerle ilgili hem sayısal hem de metinsel veriler içererek geniş bir analiz yelpazesine olanak tanır. Veri seti, eksik ve aykırı veriler gibi sorunları çözmeyi gerektirerek veri işleme adımlarını daha önemli hale getirir.
 
 - **budget (Bütçe): Filmin prodüksiyon bütçesi (sayısal).**
