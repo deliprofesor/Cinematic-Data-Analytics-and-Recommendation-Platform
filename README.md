@@ -19,8 +19,6 @@ The goal of this project is to understand wholesale customer behavior through da
 - **Matplotlib** – Plotting and visualization of data.
 - **Seaborn** – Statistical data visualization.
 - **PCA** – Principal Component Analysis for dimensionality reduction.
-- **Jupyter Notebook** – For code and documentation integration.
-- **PowerBI** – For interactive data visualizations and reports.
 
 ## Installation Instructions
 
@@ -32,58 +30,58 @@ To run the project locally, follow these steps:
    git clone https://github.com/deliprofesor/Wholesale-Customer-Segmentation.git
    cd Wholesale-Customer-Segmentation
    
-Projede, TMDB'nin sağladığı film veri seti kullanılmıştır. Bu veri seti, her bir filmi temsil eden 4803 satır ve 20 farklı özelliğe sahiptir. Özellikler arasında film başlıkları, türleri, bütçeleri, gelirleri, popülerlik puanları, izleyici oyları, çıkış tarihleri ve filmlerin kısa özetleri gibi bilgiler bulunmaktadır. Veri seti, filmlerle ilgili hem sayısal hem de metinsel veriler içererek geniş bir analiz yelpazesine olanak tanır. Veri seti, eksik ve aykırı veriler gibi sorunları çözmeyi gerektirerek veri işleme adımlarını daha önemli hale getirir.
+## Project Description
 
-- **budget (Bütçe): Filmin prodüksiyon bütçesi (sayısal).**
-- **genres (Türler): Filmin tür bilgisi. JSON formatında, birden fazla tür içerebilir (ör. Action, Adventure).**
-- **homepage: Filmin resmi web sitesi URL'si.**
-- **id: Her filme özel benzersiz kimlik numarası.**
-- **keywords (Anahtar Kelimeler): Filmi tanımlayan anahtar kelimeler (ör. "space", "future").**
-- **original_language (Orijinal Dil): Filmin dil kodu (ör. en İngilizce).**
-- **original_title: Filmin orijinal adı.**
-- **overview: Filmin kısa özeti.**
-- **popularity (Popülerlik): Filmin izlenme ve beğenilme derecesi (sayısal bir skor).**
-- **production_companies: Yapımcı şirket bilgileri (JSON formatında).**
-- **production_countries: Filmin üretildiği ülkeler (JSON formatında).**
-- **release_date: Filmin vizyon tarihi.**
-- **revenue (Gelir): Filmin dünya çapındaki toplam hasılatı.**
-- **runtime: Filmin süresi (dakika cinsinden).**
-- **spoken_languages: Filmde konuşulan diller (JSON formatında).**
-- **status: Filmin durumu (ör. Released, Post Production).**
-- **tagline: Filmin sloganı veya tanıtım cümlesi.**
-- **title: Filmin adı.**
-- **vote_average: İzleyici oylamalarının ortalaması.**
-- **vote_count: İzleyici oylamalarının toplam sayısı.**
+The project uses the TMDB movie dataset, which consists of 4803 rows and 20 different features for each movie. The features include movie titles, genres, budgets, revenues, popularity scores, viewer ratings, release dates, and short summaries of the movies. The dataset provides both numerical and textual data, enabling a wide range of analysis. It requires data preprocessing steps such as handling missing and outlier data to ensure accuracy in further analysis.
 
-# Projenin Amacı 
+## Features in the Dataset:
 
-Bu projenin temel amacı, bir film veri setini analiz ederek farklı modeller ve yöntemler geliştirmektir. Bu kapsamda, filmlerin başarısını tahmin etmek, gelir ve popülerlik ilişkisini incelemek, doğal dil işleme (NLP) tekniklerini kullanarak metinsel içeriklerden içgörüler çıkarmak ve izleyicilere öneriler sunmak üzere tavsiye sistemleri geliştirilmiştir. Sonuçların daha anlamlı hale getirilmesi için veri görselleştirme yöntemleri kullanılmıştır. Proje, film endüstrisindeki trendleri anlamak ve kullanıcı odaklı öneri sistemleri oluşturmak açısından güçlü bir temel sağlar.
-
-
-# 1. Veri Yükleme ve Temizleme
-
-Projenin ilk adımı, film veri setinin yüklenmesidir. Veri, pandas ile CSV formatından yüklenmiş ve eksik veriler incelenmiştir. Örneğin, budget, revenue ve popularity gibi sütunlardaki eksik değerler, veri analizlerini etkilememesi için ortanca (median) değerlerle doldurulmuştur. Ayrıca, budget sütunundaki aykırı değerler %95'lik eşik değeri kullanılarak sınırlandırılmış ve release_date sütunu datetime formatına dönüştürülerek hatalı değerler temizlenmiştir. Bu adım, sonraki analizlerin doğruluğunu artırmak için kritik bir aşamadır.
-
-# 2. Veri Analizi ve Görselleştirme
-
-Verinin dağılımlarını ve ilişkilerini anlamak için çeşitli analizler ve görselleştirme yöntemleri kullanılmıştır. Log dönüşümleri, budget ve revenue sütunlarında yapılmış ve dağılımlar normalize edilmiştir. genres sütunu sayısal değerlere dönüştürülerek sınıflandırma modellerine uygun hale getirilmiştir. K-means kümeleme algoritması, popularity, vote_count ve revenue gibi özellikler üzerinde uygulanmış ve filmler 3 kümeye ayrılmıştır. Küme sonuçları, scatterplot grafiklerle görselleştirilmiştir. Ayrıca, release_year bilgisi türetilerek yıllara göre toplam gelir ve bütçe trendleri analiz edilmiştir.
-
-# 3. Tahmin Modelleri
-
-Proje kapsamında üç farklı tahmin modeli geliştirilmiştir:
-
-- **Başarı Tahmini (Random Forest): Filmlerin başarılı (1) veya başarısız (0) olarak sınıflandırılması amacıyla, budget, popularity, vote_count, runtime ve vote_average özellikleri kullanılarak bir Random Forest modeli eğitilmiştir. Bu model, %85 doğruluk oranıyla başarılı bir performans göstermiştir.**
-- **Gelir Tahmini (Doğrusal Regresyon): budget bağımsız değişkeni ile filmlerin revenue değerlerini tahmin etmek için bir doğrusal regresyon modeli eğitilmiştir. Model, gelir tahmininde orta düzeyde bir başarı sağlamıştır.**
-- **Popülerlik Tahmini (Çoklu Regresyon): budget, vote_count, runtime ve vote_average gibi özellikler kullanılarak filmlerin popülerlik puanları tahmin edilmiştir. Model, popülerlik tahmininde makul bir performans göstermiştir.**
+- **budget (Budget): The production budget of the movie (numerical).
+- **genres (Genres): The genre information of the movie. In JSON format, it can include multiple genres (e.g., Action, Adventure).
+- **homepage: The official website URL of the movie.
+- **id: Unique identifier for each movie.
+- **keywords (Keywords): Keywords that describe the movie (e.g., "space", "future").
+- **original_language (Original Language): The language code of the movie (e.g., en for English).
+- **original_title: The original title of the movie.
+- **overview: A short summary of the movie.
+- **popularity (Popularity): A numerical score indicating the movie’s viewership and popularity.
+- **production_companies: Information about the production companies (JSON format).
+- **production_countries: Countries where the movie was produced (JSON format).
+- **release_date: The release date of the movie.
+- **revenue (Revenue): The worldwide gross earnings of the movie.
+- **runtime: The length of the movie in minutes.
+- **spoken_languages: The languages spoken in the movie (JSON format).
+- **status: The current status of the movie (e.g., Released, Post Production).
+- **tagline: The slogan or promotional tagline of the movie.
+- **title: The title of the movie.
+- **vote_average: The average viewer rating for the movie.
+- **vote_count: The total number of viewer ratings for the movie.
   
-# 4. Doğal Dil İşleme (NLP)
+## Project Aim
 
-Film özetlerinden içgörüler elde etmek için metin analizi yapılmıştır. TF-IDF yöntemi, overview sütunundaki metinlerden önemli anahtar kelimeler çıkarmak için kullanılmıştır. Bunun yanı sıra, textblob ile her filmin özet metni üzerinde duygu analizi yapılmış ve duygu puanları hesaplanmıştır. Elde edilen duygu puanları, histogram grafiklerle görselleştirilmiştir.
+The core objective of this project is to analyze a movie dataset and develop various models and methods. This includes predicting movie success, examining the relationship between revenue and popularity, extracting insights from textual content using natural language processing (NLP) techniques, and developing recommendation systems to offer suggestions to users. Visualization methods are used to make the results more meaningful. The project provides a strong foundation for understanding trends in the movie industry and creating user-focused recommendation systems.
 
-# 5. Tavsiye Sistemleri
+## 1. Data Loading and Cleaning
+The first step in the project involves loading the movie dataset. The data was loaded from a CSV file using pandas, and missing data was examined. For instance, missing values in columns such as budget, revenue, and popularity were filled using the median value to ensure accurate analysis. Outliers in the budget column were capped using a 95% threshold, and the release_date column was converted to datetime format to clean erroneous values. This step is critical for ensuring the accuracy of subsequent analyses.
 
-Projede üç farklı tavsiye sistemi geliştirilmiştir:
+## 2. Data Analysis and Visualization
 
-- **İçerik Tabanlı Tavsiye: genres, keywords ve overview sütunlarındaki metinler birleştirilmiş ve TF-IDF ile vektörleştirilmiştir. Cosine similarity yöntemiyle benzer filmler önerilmiştir.**
-- **Kullanıcı Tabanlı Tavsiye: Filmleri izleyici oylarına göre sıralayan bir sistem geliştirilmiştir. IMDB tarzı ağırlıklı puanlama yöntemi kullanılarak en popüler 5 film önerilmiştir.**
-- **Hibrit Tavsiye Sistemi: İçerik tabanlı ve kullanıcı tabanlı sistemlerin sonuçları birleştirilmiş ve hibrit skorlarla en iyi 5 film önerilmiştir.**
+Various analysis and visualization methods were used to understand the distributions and relationships in the data. Log transformations were applied to the budget and revenue columns to normalize the distributions. The genres column was converted into numerical values to make it suitable for classification models. The K-means clustering algorithm was applied to features such as popularity, vote_count, and revenue, and the movies were grouped into 3 clusters. The clustering results were visualized with scatter plot graphs. Additionally, total revenue and budget trends were analyzed by creating a new column for the release year.
+
+## 3. Predictive Models
+Three predictive models were developed for the project:
+
+-**Success Prediction (Random Forest):** A Random Forest model was trained to classify movies as successful (1) or unsuccessful (0) using features such as budget, popularity, vote_count, runtime, and vote_average. This model achieved an accuracy of 85%.
+- **Revenue Prediction (Linear Regression):** A linear regression model was trained to predict movie revenue based on the budget. The model showed moderate success in predicting revenue.
+- **Popularity Prediction (Multiple Regression):** Features like budget, vote_count, runtime, and vote_average were used to predict movie popularity. The model performed reasonably well in predicting popularity.
+  
+## 4. Natural Language Processing (NLP)
+
+Text analysis was performed to extract insights from movie summaries. The TF-IDF method was used to extract important keywords from the overview column. Additionally, sentiment analysis was conducted on the summary text using TextBlob, and sentiment scores were computed. The sentiment scores were visualized with histogram charts.
+
+## 5. Recommendation Systems
+Three different recommendation systems were developed:
+
+- **Content-Based Recommendation:** The genres, keywords, and overview columns were combined and vectorized using TF-IDF. Similar movies were recommended using the cosine similarity method.
+- **User-Based Recommendation:** A system was developed to rank movies based on user ratings. An IMDB-style weighted rating system was used to recommend the top 5 most popular movies.
+- **Hybrid Recommendation System:** The results of the content-based and user-based systems were combined, and the top 5 movies were recommended based on a hybrid score.
