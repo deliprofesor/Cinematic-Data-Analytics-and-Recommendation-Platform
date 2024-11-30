@@ -27,7 +27,7 @@ To run the project locally, follow these steps:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/deliprofesor/Wholesale-Customer-Segmentation.git
+   git clone https://github.com/deliprofesor/Cinematic-Data-Analytics-and-Recommendation-Platform.git
    cd Wholesale-Customer-Segmentation
    
 ## Project Description
