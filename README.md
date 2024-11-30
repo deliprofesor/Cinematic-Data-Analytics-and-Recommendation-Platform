@@ -36,26 +36,26 @@ The project uses the TMDB movie dataset, which consists of 4803 rows and 20 diff
 
 ## Features in the Dataset:
 
-- **budget (Budget): The production budget of the movie (numerical).
-- **genres (Genres): The genre information of the movie. In JSON format, it can include multiple genres (e.g., Action, Adventure).
-- **homepage: The official website URL of the movie.
-- **id: Unique identifier for each movie.
-- **keywords (Keywords): Keywords that describe the movie (e.g., "space", "future").
-- **original_language (Original Language): The language code of the movie (e.g., en for English).
-- **original_title: The original title of the movie.
-- **overview: A short summary of the movie.
-- **popularity (Popularity): A numerical score indicating the movie’s viewership and popularity.
-- **production_companies: Information about the production companies (JSON format).
-- **production_countries: Countries where the movie was produced (JSON format).
-- **release_date: The release date of the movie.
-- **revenue (Revenue): The worldwide gross earnings of the movie.
-- **runtime: The length of the movie in minutes.
-- **spoken_languages: The languages spoken in the movie (JSON format).
-- **status: The current status of the movie (e.g., Released, Post Production).
-- **tagline: The slogan or promotional tagline of the movie.
-- **title: The title of the movie.
-- **vote_average: The average viewer rating for the movie.
-- **vote_count: The total number of viewer ratings for the movie.
+- **budget (Budget):** The production budget of the movie (numerical).
+- **genres (Genres):** The genre information of the movie. In JSON format, it can include multiple genres (e.g., Action, Adventure).
+- **homepage:** The official website URL of the movie.
+- **id:** Unique identifier for each movie.
+- **keywords (Keywords):** Keywords that describe the movie (e.g., "space", "future").
+- **original_language (Original Language):** The language code of the movie (e.g., en for English).
+- **original_title:** The original title of the movie.
+- **overview:** A short summary of the movie.
+- **popularity (Popularity):** A numerical score indicating the movie’s viewership and popularity.
+- **production_companies:** Information about the production companies (JSON format).
+- **production_countries:** Countries where the movie was produced (JSON format).
+- **release_date:** The release date of the movie.
+- **revenue (Revenue):** The worldwide gross earnings of the movie.
+- **runtime:** The length of the movie in minutes.
+- **spoken_languages:** The languages spoken in the movie (JSON format).
+- **status:** The current status of the movie (e.g., Released, Post Production).
+- **tagline:** The slogan or promotional tagline of the movie.
+- **title:** The title of the movie.
+- **vote_average:** The average viewer rating for the movie.
+- **vote_count:** The total number of viewer ratings for the movie.
   
 ## Project Aim
 
