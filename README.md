@@ -2,8 +2,6 @@
 
 ![movie](https://github.com/user-attachments/assets/78507f89-5b83-4d01-b937-c1f76344046d)
 
-# Wholesale Customer Segmentation and Analysis
-
 This project aims to perform data exploration, segmentation, and modeling on wholesale customer data using various clustering algorithms such as K-Means, DBSCAN, and Gaussian Mixture Models (GMM). Additionally, the project leverages Principal Component Analysis (PCA) for data visualization and uses decision trees to predict customer channel preferences based on their attributes.
 
 ## Project Overview
